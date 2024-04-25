@@ -9,8 +9,8 @@ on:
 
 env:
   # change env here
-  GITHUB_NAME: naosense
-  GITHUB_EMAIL: pingao777@gmail.com
+  GITHUB_NAME: tech1024
+  GITHUB_EMAIL: 941104c@gmail.com
 
 jobs:
   sync:
