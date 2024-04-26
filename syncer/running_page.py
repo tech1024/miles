@@ -54,10 +54,13 @@ def refresh_running_csv(activities: list):
   logger.info("done")
 
 def get_format_pace(average_speed: float) -> str:
-  pace = (1000.0 / 60.0) * (1.0 / average_speed)
-  minutes = math.floor(pace)
-  seconds = math.floor((pace - minutes) * 60.0)
-  return "{}:{:02d}".format(minutes, seconds)
+    if average_speed == 0:
+        return "0:00"
+    else:
+        pace = (1000.0 / 60.0) * (1.0 / average_speed)
+        minutes = math.floor(pace)
+        seconds = math.floor((pace - minutes) * 60.0)
+        return "{}:{:02d}".format(minutes, seconds)
 
 if __name__ == "__main__":
     args = sys.argv
